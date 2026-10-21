@@ -16,19 +16,15 @@ def main():
         s = n[i:i+k] #subarray pro minimalne velke substringy
         if len(s)==k: # jen pokud je substring velky jako minimalni pocet znaku, bereme ho. 
             print(s)
-            # hledam rozdil mezi nejvetsim a nejmensim cislem v k sized subarray, coz ale neni idealni reseni a mel bych to zahodit.                       
-            for x in s: 
-                if x > max:
-                    max = x
-                if x < min:
-                    min = x
-                print("max: " + str(max))
-                print("min: " + str(min))
-                if (max - min) == k-1:
-                    print("ted se to scita")
-                    vysledek += 1
-            min = 1000000000
-            max = 0
+            # takze mam substrings velke jako nejmensi
+            # co ted?
+            # mohl bych u nich jít try +1 na obě strany, postupně? nejdív right a pak left? Prolly not
+            # jinak, MÁM ty base nejmenší substrings, potřebuju zjistit kolik je mezi nima místa a na
+            # tom pak přičítat shit to them
+            # takže potřebuju uložit start pozici subarraye, což je i. (i + k dá konec)
+            # uložit všechny do nového arraye.
+            # a s tím poíčtat mezery mezi nimi. 
+            # Yup. Nice
         
     print("vysledek: " + str(vysledek))
 
